@@ -37,6 +37,7 @@ function shuffle(array) {
 }
 
 let shuffledColors = shuffle(COLORS);
+let count = 0;
 
 // this function loops over the array of colors
 // it creates a new div and gives it a class with the value of the color
@@ -58,6 +59,7 @@ function createDivsForColors(colorArray) {
 
     // append the div to the element with an id of game
     gameContainer.append(newDiv);
+    count++;
   }
 }
 
@@ -102,14 +104,14 @@ function handleCardClick(event) {
         }, 1000);
       }
     }
-    else if (click == 3) {
-      let tooFast = document.querySelectorAll("[data-state='revealed']")
-      for (let i = 0; i < tooFast.length; i++) {
-        tooFast[i].dataset.state = "hidden"
-      }
+    // else if (click == 3) {
+    //   let tooFast = document.querySelectorAll("[data-state='revealed']")
+    //   for (let i = 0; i < tooFast.length; i++) {
+    //     tooFast[i].dataset.state = "hidden"
+    //   }
 
-      click = 1;
-    }
+    //   click = 1;
+    // }
   }
 }
 
